@@ -11,6 +11,13 @@ let booleanIsloggedIn=Boolean(isLoggedIn);
 // console.log(booleanIsloggedIn)
 
 
-let  sonNum=33;
-let stingNUm = String(sonNum);
-console.log(typeof stingNUm);
+// let  sonNum=33;
+// let stingNUm = String(sonNum);
+// console.log(typeof stingNUm);
+
+console.log("1"+2);
+console.log(1+"2");
+
+
+
+
