@@ -1,0 +1,11 @@
+// global execution context;
+
+// functional execution context
+
+// eval execution context
+
+// memory creation phase 
+// execution phase 
+
+// memory phase - >  all the variables get placed in memory with undefined value;
+
