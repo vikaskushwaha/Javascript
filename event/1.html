@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2> Amazing Images</h2>
+    <div>
+        <ul id = "Images">
+            <li> <img width= "200px" id = "photoshop" src="1.jpg" alt="photoshop"></li>
+            <li> <img width="200px" id = "india" src="2.jpg"></li>
+            <li> <img width="200px" id = "river" src="3.jpg"></li>
+            <li> <img width="200px" id = "offroad" src="4.jpg" alt="" ></li>
+            <li><a style=" color: aliceblue;" href="https://google.com" id="google">google</a></li>
+
+
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('offroad').onclick = function(){
+    //     alert("offroad clicked")
+    // }
+    // type, timestamp, defaultPrevented , target, toElement,src element, currentTarget, clientx , clientY, ScreenX
+    // altkey, ctrlKey, keyCode 
+
+    // document.getElementById('Images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // },false)  
+
+    // document.getElementById('offroad').addEventListener('click', function(e){
+    //     console.log("clicked inside the offroad");
+    //     e.stopPropagation();
+    // },false)  
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked");
+        
+    // },false)
+
+    document.querySelector('#Images').addEventListener('click',function(event){
+        console.log(event.target.tagName);
+        if(event.target.tagName==='IMG'){
+            console.log(event.target.id);
+            let removeit = event.target.parentNode
+            removeit.remove();
+        }
+       
+        // removeit.parentNode.removeChild(removeit)
+    })
+
+</script>
+</html>
