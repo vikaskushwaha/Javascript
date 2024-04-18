@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <title></title>
+</head>
+<body>
+   <h1> Learn Code</h1>
+   <button id = "stop">Stop</button>
+</body>
+<script>
+    const sayVikas = function(){
+        console.log("Vikas");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML= "best learning meterial"
+    
+    }
+    const ChangeMe= setTimeout(changeText, 2000)
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(ChangeMe)
+        
+        console.log("stopeed")
+    })
+</script>
+</html>
