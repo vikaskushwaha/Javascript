@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>key</title>
+</head>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    /* .Key{
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+    } */
+    .Project{
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+        
+    }
+    .insert{
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+    }
+</style>
+<body>
+
+    <div class="Project">
+        <div Id = "insert">
+            <div class="Key"> Press The Key And Watch The Magic</div>
+
+        </div>
+    </div>
+</body>
+<script>
+    const insert = document.getElementById('insert')
+    window.addEventListener('keydown', (e)=>{
+        insert.innerHTML = ` 
+            <div class = 'color'>
+                <table>
+            <tr>
+                <th>Key</th>
+                <th>Keycode</th>
+                <th>code</th>
+            </tr>
+            <tr>
+                <td>${e.key === " "? "Space": e.key}</td>
+                <td>${e.keyCode}</td>
+                <td>${e.code}</td>
+            </tr>
+            </table>
+            </div>
+            `
+    })
+</script>
+</html>
