@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    #container{
+        display: flex;
+        justify-content: center;
+    }
+    .Card{
+       
+        width: 200px
+
+    }
+    
+    
+   </style>
+    <title>Assignment</title>
+</head>
+<body>
+    <div id = "container">
+        <div class="Card">
+           <img  id = "image" src="" alt=""> 
+           <div id = "details">
+                <span id="Fallowers">Fallowers</span>
+                <span id="Follwing">Follwing</span>  
+           </div> 
+        </div>
+    </div>
+    
+   
+</body>
+
+<script>
+    const requestUrl = 'https://api.github.com/users/vikaskushwaha'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            const data = JSON.parse(this.responseText);
+            console.log(typeof data);
+            // console.log(data.followers);
+            document.getElementById('image').src = data.avatar_url
+            document.getElementById('Fallowers').addEventListener('click',function(){
+                console.log(data.followers);
+            })
+            document.getElementById('Follwing').addEventListener('click',function(){
+                console.log(data.following);
+            })
+
+        
+        }
+    }
+    xhr.send();
+</script>
+</html>
