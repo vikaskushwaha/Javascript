@@ -83,7 +83,7 @@ consumePromiseFive();
 //         const data = await response.json()
 //         console.log(data);
 //    }
-//    catch(error){
+//    catch(error){ 
 //     console.log("E ", Error);
 //    }
 // }
@@ -95,3 +95,4 @@ fetch('https://api.github.com/users/vikaskushwaha').then((response)=>{
 }).then((data)=>{
     console.log(data);
 }).catch((error)=>console.log(error))
+ 
